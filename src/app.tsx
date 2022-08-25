@@ -1,4 +1,5 @@
-import React from 'react';
-const App = () => {
+const App = (): null => {
   return null;
 };
+
+export default App;

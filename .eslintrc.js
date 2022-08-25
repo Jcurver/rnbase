@@ -13,7 +13,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'prettier',
+    'eslint-config-prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -25,9 +25,9 @@ module.exports = {
     project: './tsconfig.json',
   },
 
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'eslint-plugin-prettier'],
   rules: {
-    indent: 2,
+    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single', { avoidEscape: true }],
     semi: ['error', 'always'],
@@ -35,7 +35,6 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     'react/display-name': 'off',
     'react/prop-types': 'off',
-    prettier: 'error',
   },
   settings: {
     react: {
